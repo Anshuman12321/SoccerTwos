@@ -1,1 +1,23 @@
 https://drive.google.com/drive/folders/1MLf6PUAwYq6LnnwE9dPJFXqKqo9tVl-q
+
+google colab doc
+
+!git clone https://github.com/Unity-Technologies/ml-agents
+%cd ml-agents
+!pip install -e ./ml-agents-envs
+!pip install -e ./ml-agents
+!pip install torch
+!pip install onnx==1.12.0
+
+Download zip file: https://drive.google.com/file/d/1KuqBKYiXiIcU4kNMqEzhgypuFP5_45CL/view
+Create a new folder within ml-agents called 'training-envs-executables'
+Upload the .zip in that new folder
+
+%cd training-envs-executables
+!unzip SoccerTwos.zip
+
+!chmod -R 755 /content/ml-agents/training-envs-executables/SoccerTwos.x86_64
+
+%cd ..
+
+!mlagents-learn ./config/poca/SoccerTwos.yaml --env=./training-envs-executables/SoccerTwos.x86_64 --run-id="DigDeeper" --no-graphics
