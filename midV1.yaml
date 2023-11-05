@@ -12,7 +12,7 @@ behaviors:
       num_epoch: 3
       learning_rate_schedule: linear
       beta_schedule: linear
-      epsilon_schedule: constant
+      epsilon_schedule: linear
     checkpoint_interval: 1000000  # Decreased checkpoint interval
     network_settings:
       normalize: false
