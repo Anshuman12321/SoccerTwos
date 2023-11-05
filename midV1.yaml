@@ -19,6 +19,7 @@ behaviors:
       hidden_units: 1024  # Increased hidden units
       num_layers: 4  # Increased number of layers
       vis_encode_type: simple
+      memory: null
       goal_conditioning_type: hyper
       deterministic: false
     reward_signals:
